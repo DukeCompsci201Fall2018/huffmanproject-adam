@@ -26,7 +26,7 @@ public class HuffProcessor {
 	public static final int DEBUG_HIGH = 4;
 	public static final int DEBUG_LOW = 1;
 	
-	String[] encodings = new String[ALPH_SIZE + 1];
+	private String[] encodings = new String[ALPH_SIZE + 1];
 
 	public HuffProcessor() {
 		this(0);
@@ -97,7 +97,6 @@ public class HuffProcessor {
 	}
 
 	private void codingHelper(HuffNode root, String direction) {
-		//		if(root==null) return;
 
 		if(root.myLeft==null && root.myRight == null) {
 			encodings[root.myValue]=direction;
