@@ -90,6 +90,8 @@ public class HuffProcessor {
 				pq.add(new HuffNode(i,counts[i],null,null));
 			}
 		}
+		
+		//Debugging
 		if(myDebugLevel>= DEBUG_HIGH) {
 			System.out.printf("pq created with %d nodes\n",pq.size());
 		}
@@ -124,6 +126,8 @@ public class HuffProcessor {
 
 		if(root.myLeft==null && root.myRight == null) {
 			encodings[root.myValue]=direction;
+			
+			//Debugging
 			if(myDebugLevel >= DEBUG_HIGH) {
 				System.out.printf("encoding for %d is %s\n", root.myValue, direction );
 			}
